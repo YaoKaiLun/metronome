@@ -24,10 +24,13 @@ html,body,#my_app{
     display: flex;
     flex-direction: column;
 }
-#content{
+#operatorMode,#simpleMode{
     flex: 5;
     display: flex;
     flex-direction: column;
+}
+#simpleMode{
+    display: none;
 }
 .flex-center{
     display: flex;

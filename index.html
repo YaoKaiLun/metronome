@@ -10,11 +10,11 @@
         <div id="main">
             <div id="left">
                 <div id="modeSwitch">
-                    <div><input type="radio" name="mode" value="1">操作模式</div>
+                    <div><input type="radio" name="mode" value="1" checked>操作模式</div>
                     <div><input type="radio" name="mode" value="2">精简模式</div>
                 </div>
             </div>
-            <div id="content">
+            <div id="operatorMode">
                 <!--隐藏-->
                 <audio id="my_audio" src="audio/1.mp3">
                     Your browser does not support the audio element.
@@ -41,12 +41,13 @@
                 </div>
 
                 <div class="flex-center" id="tempoBar">
-                    <div><input type="radio" name="tempo" value="">1/4</div>
-                    <div><input type="radio" name="tempo" value="">2/4</div>
-                    <div><input type="radio" name="tempo" value="">3/4</div>
-                    <div><input type="radio" name="tempo" value="">4/4</div>
+                    <div><input type="radio" name="tempo" value="1">1/4</div>
+                    <div><input type="radio" name="tempo" value="2">2/4</div>
+                    <div><input type="radio" name="tempo" value="3">3/4</div>
+                    <div><input type="radio" name="tempo" value="4" checked>4/4</div>
                 </div>
             </div>
+            <div id="simpleMode"></div>
             <div id="right"></div>
         </div>
         <div id="bottom"></div>
