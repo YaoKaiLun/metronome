@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="index.css" /></head>
+<body>
+    <div id="my_app">
+        <div id="top"></div>
+        <div id="main">
+            <div id="left">
+                <div id="modeSwitch">
+                    <div><input type="radio" name="mode" value="1">操作模式</div>
+                    <div><input type="radio" name="mode" value="2">精简模式</div>
+                </div>
+            </div>
+            <div id="content">
+                <!--隐藏-->
+                <audio id="my_audio" src="audio/1.mp3">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <div class="flex-center" id="speedBar">
+                    <div>
+                        <div><input type="button" id="subBeatNum" value="-"></div>
+                        <input id="beatNum" type="range" min="30" max="240" step="1" value="80">
+                        <div><input type="button" id="addBeatNum" value="+"></div>
+                        <div id="nowBeatNum">80</div>
+                    </div>
+                </div>
+
+                <div class="flex-center" id="selectSoundBar">
+                    <input type="button" id="preSoundType" value="<">
+                    <div id="soundType">1</div>
+                    <input type="button" id="nextSoundType" value=">">
+                </div>
+
+                <div class="flex-center" id="switchBar">
+                    <input id="start" type="button" value="开始">
+                    <input id="stop" type="button" value="停止">
+                </div>
+
+                <div class="flex-center" id="tempoBar">
+                    <div><input type="radio" name="tempo" value="">1/4</div>
+                    <div><input type="radio" name="tempo" value="">2/4</div>
+                    <div><input type="radio" name="tempo" value="">3/4</div>
+                    <div><input type="radio" name="tempo" value="">4/4</div>
+                </div>
+            </div>
+            <div id="right"></div>
+        </div>
+        <div id="bottom"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+html,body,#my_app{
+    width: 100%;
+    height: 100%;
+}
+#my_app{
+    display: flex;
+    flex-direction: column;
+}
+#top,#bottom{
+    flex: 1;
+}
+#main{
+    flex: 5;
+    display: flex;
+}
+#left,#right{
+    flex: 2;
+}
+#left{
+    display: flex;
+    justify-content: flex-end;
+}
+#modeSwitch {
+    display: flex;
+    flex-direction: column;
+}
+#content{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+#speedBar{
+    flex: 1;
+}
+#selectSoundBar{
+    flex: 1;
+}
+#switchBar{
+    flex: 3;
+}
+#tempoBar{
+    flex: 1;
+}
