@@ -1,0 +1,16 @@
+@media screen and (max-width: 800px) {
+    #simpleMode{
+        flex: 10;
+    }
+}
+@media screen and (max-width: 500px) {
+    #main{
+        flex-direction: column;
+    }
+    #left,#right{
+        flex:1;
+    }
+    #modeSwitch{
+        flex-direction: row;
+    }
+}

@@ -2,49 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height" />
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="index.css" /></head>
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="range.css" />
+    <link rel="stylesheet" type="text/css" href="phone.css" />
+</head>
 <body>
     <div id="my_app">
         <div id="top"></div>
         <div id="main">
             <div id="left">
                 <div id="modeSwitch">
-                    <div><input type="radio" name="mode" value="1" checked>操作模式</div>
-                    <div><input type="radio" name="mode" value="2">精简模式</div>
+                    <div><input id="toSettingMode" type="radio" name="mode" value="1" checked>
+                         <label for="toSettingMode"><i class="fa fa-cogs"></i></label></div>
+                    <div><input id="toSimpleMode" type="radio" name="mode" value="2">
+                         <label for="toSimpleMode"><i class="fa fa-arrows-alt" title="精简模式"></i></label></div>
                 </div>
             </div>
             <div id="operatorMode">
                 <!--隐藏-->
-                <audio id="my_audio" src="audio/1.mp3">
+                <audio id="my_audio" src="audio/1/1.mp3">
                     Your browser does not support the audio element.
                 </audio>
 
-                <div class="flex-center" id="speedBar">
-                    <div>
-                        <div><input type="button" id="subBeatNum" value="-"></div>
+                <div id="speedBar">
+                    <div id="nowBeatNum">80</div>
+                    <div id="speedBlock">
+                        <i id="subBeatNum" class="fa fa-minus"></i>
                         <input id="beatNum" type="range" min="30" max="240" step="1" value="80">
-                        <div><input type="button" id="addBeatNum" value="+"></div>
-                        <div id="nowBeatNum">80</div>
+                        <i id="addBeatNum" class="fa fa-plus"></i>
                     </div>
                 </div>
 
                 <div class="flex-center" id="selectSoundBar">
-                    <input type="button" id="preSoundType" value="<">
-                    <div id="soundType">1</div>
-                    <input type="button" id="nextSoundType" value=">">
+                    <i class="fa fa-step-backward fa-2x" id="preSoundType"></i>
+                    <div id="soundType"></div>
+                    <i class="fa fa-step-forward fa-2x" id="nextSoundType"></i>
                 </div>
 
                 <div class="flex-center" id="switchBar">
-                    <input id="start" type="button" value="开始">
-                    <input id="stop" type="button" value="停止">
+                    <div id="switchArea">
+                        <input type="checkbox" id="switch" name="switch">
+                        <label for="switch"></label>
+                    </div>
                 </div>
 
                 <div class="flex-center" id="tempoBar">
-                    <div><input type="radio" name="tempo" value="1">1/4</div>
-                    <div><input type="radio" name="tempo" value="2">2/4</div>
-                    <div><input type="radio" name="tempo" value="3">3/4</div>
-                    <div><input type="radio" name="tempo" value="4" checked>4/4</div>
+                    <div class='radioGroup'>
+                        <input id="tempo1" type="radio" name="tempo" value="1">
+                        <label for='tempo1'>1/4</label>
+                        <input id="tempo2" type="radio" name="tempo" value="2">
+                        <label for='tempo2'>2/4</label>
+                        <input id="tempo3" type="radio" name="tempo" value="3">
+                        <label for='tempo3'>3/4</label>
+                        <input id="tempo4" type="radio" name="tempo" value="4" checked>
+                        <label for="tempo4">4/4</label>
+                    </div>
                 </div>
             </div>
             <div id="simpleMode"></div>
